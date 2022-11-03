@@ -1,10 +1,12 @@
+import Header from "./components/header/Header"
+// import MainContent from "./components/mainContent/MainContent"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App__header">
-      </header>
-    </div>
+    <>
+        <Header />
+        {/* <MainContent /> */}
+    </>
   );
 }
 
