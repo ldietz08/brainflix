@@ -13,12 +13,13 @@
       padding-left: 0.5rem;
   }
   &__img {
-    height: 6rem;
-    width: 10rem;
+    height: 5rem;
+    width: 8rem;
     border-radius: .375rem;
   }
   &__title {
       @include text.subheader-mobile;
+      color: $black;
       margin-top: 0.5rem;
   }
 }

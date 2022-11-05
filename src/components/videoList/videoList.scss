@@ -4,8 +4,34 @@
 @use "../../styles/partials/resets";
 @use "../../styles/partials/fonts";
 
-.video {
-    &__list {
-        padding: 1rem;
-    }
+.videoList {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    padding-left: 0.5rem;
+    width: 50%;
+  }
+  &__title {
+    @include text.subheader-mobile;
+    color: $black;
+    margin-top: 0.5rem;
+  }
+  &__thumbnail {
+    height: 5rem;
+    width: 8rem;
+    border-radius: 0.375rem;
+  }
 }
+
+  // &__list {
+  //     padding: 1rem;
+  // }
+  // &__list-title {
+  //     @include text.subheader-mobile;
+  //     padding-left: 0.5rem;
+  //     color: $silver;
+  //     text-transform: uppercase;
+  //     font-weight: 400;
+  // }

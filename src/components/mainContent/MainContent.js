@@ -1,23 +1,29 @@
 import "./MainContent.scss";
 import heartSymbol from "../../assets/icons/likes.svg";
 import eyeSymbol from "../../assets/icons/views.svg";
-import VideoData from "../../assets/data/video-details.json";
+// import getVideos, { getVideoDetails } from "../../assets/utils/Utils";
 
-function MainContent() {
+//destructuring -> const/let {key1, key2, key3} = variable;
+const MainContent = ({videoDetails}) => {
+  
+  //rest holds every other property that is not being destructured 
+  //spread operator makes a copy of the entire object
+
+  const {title,channel,image,timestamp,views,likes,description, ...rest} = videoDetails;
   return (
     <>
       <main className="mainVideo">
-        <video className="mainVideo__content" controls poster=""></video>
+        <video className="mainVideo__content" controls poster={image}></video>
       </main>
       <div className="video__description">
-        <h1 className="video__title">BMX Rampage: 2021 Highlights</h1>
+        <h1 className="video__title">{title}</h1>
         <div className="video__details-wrapper">
           <div className="video__details-container">
             <div className="video__details">
-              <span className="video__details-creator">By Red Crow</span>
+              <span className="video__details-creator">{channel}</span>
             </div>
             <div className="video__details">
-              <span className="video__details-date">07/11/2021</span>
+              <span className="video__details-date">{timestamp}</span>
             </div>
           </div>
           <div className="video__metrics-container">
@@ -27,25 +33,21 @@ function MainContent() {
                 src={eyeSymbol}
                 alt="Eye symbol"
               ></img>
-              <span className="video__metrics-views">1,001,023</span>
+              <span className="video__metrics-views">{views}</span>
             </div>
-            <div>
+            <div className="video__metrics">
               <img
                 className="video__metrics-likes-img"
                 src={heartSymbol}
                 alt="Heart symbol"
               ></img>
-              <span className="video__metrics-likes">110,985</span>
+              <span className="video__metrics-likes">{likes}</span>
             </div>
           </div>
         </div>
         <div className="video__description-container">
           <p className="video__description-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id felis
-            et libero feugiat hendrerit eget in purus. Donec ullamcorper
-            volutpat felis, non rhoncus dui imperdiet vitae. Nullam cursus elit
-            massa, sit amet ultricies est auctor dignissim. Integer euismod
-            tellus.
+            {description}
           </p>
         </div>
       </div>

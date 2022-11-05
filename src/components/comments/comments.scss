@@ -7,7 +7,7 @@
 .comments {
   &__container {
     padding: 0 1rem;
-    height: 50vh;
+    height: 35vh;
   }
   &__total {
       @include text.body-copy-mobile;
@@ -26,6 +26,7 @@
     height: 2.5rem;
     width: 2.5rem;
     margin-top: 1.5rem;
+    flex-shrink: 0;
   }
   &__input-title {
     @include text.labels-buttons-mobile;

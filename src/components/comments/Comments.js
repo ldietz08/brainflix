@@ -1,7 +1,8 @@
 import React from "react";
 import "./Comments.scss";
+import CommentsCard from "./CommentsCard";
 
-function Comments() {
+const Comments = () => {
   return (
     <>
       <section className="comments__container">
@@ -22,6 +23,7 @@ function Comments() {
           </div>
         </div>
       </section>
+      <CommentsCard />
     </>
   );
 }
