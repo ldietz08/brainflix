@@ -8,8 +8,8 @@
   &__content {
     width: 100vw;
     aspect-ratio: 16/9;
-    //background-color:;
-    // max-height:;
+    background-color: $dark-black;
+    max-height: 40%;
   }
 }
 
@@ -21,6 +21,7 @@
     @include text.page-header-mobile;
     margin: 0;
     padding-bottom: 1rem;
+    font-weight: 600;
   }
   &__details-wrapper {
     display: flex;
@@ -35,7 +36,7 @@
   }
   &__details-creator {
     @include text.subheader-mobile;
-    font-weight: 700;
+    font-weight: 600;
     display: inline-block;
     margin-bottom: 1rem;
   }
@@ -61,7 +62,9 @@
     padding-right: 1.5rem;
   }
   &__description-text {
+    @include text.body-copy-mobile;
     margin-bottom: 0;
+    color: $black;
   }
 }
 
@@ -102,15 +105,16 @@
     display: flex;
     justify-content: center;
     background-color: $dark-black;
+    width: 100vw;
     &__content {
-      width: 70%;
+      width: 80%;
     }
   }
   .video {
     &__description {
       padding-left: 8rem;
+      padding-right: 0;
       margin: 0;
-      width: 60%;
     }
   }
 }

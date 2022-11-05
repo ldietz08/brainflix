@@ -15,9 +15,9 @@ const MainContent = ({videoDetails}) => {
 
   return (
     <>
-      {/* <main className="mainVideo">
+      <main className="mainVideo">
         <video className="mainVideo__content" controls poster={image}></video>
-      </main> */}
+      </main>
       <div className="video__description">
         <h1 className="video__title">{title}</h1>
         <div className="video__details-wrapper">

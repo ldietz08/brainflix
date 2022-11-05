@@ -10,10 +10,10 @@
     height: 35vh;
   }
   &__total {
-      @include text.body-copy-mobile;
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
+    @include text.body-copy-mobile;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
   }
   &__wrapper {
     display: flex;
@@ -31,7 +31,7 @@
   &__input-title {
     @include text.labels-buttons-mobile;
     font-size: 0.6rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0;
     text-transform: uppercase;
     color: $silver;
@@ -61,50 +61,7 @@
     background-repeat: no-repeat;
     background-position: 5%;
   }
-}
-
-/* Media queries for tablet */
-
-@include breakpoints.medium {
-    .comments {
-        &__wrapper {
-            justify-content: space-evenly;
-        }
-        &__input-btn-container {
-            display: flex;
-            align-items: center;
-        }
-        &__text-input {
-            width: 60vw;
-            height: 2.5rem;
-            padding-top: 0.5rem;
-            padding-bottom: 0;
-        }
-        &__btn {
-            width: 20vw;
-            height: 2.5rem;
-            background-position: 6%;
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
-    }
-}
-
-/* Media queries for desktop */
-
-@include breakpoints.large {
-    .comments {
-        &__wrapper {
-            justify-content: flex-start;
-        }
-        &__text-input {
-            width: 30vw;
-        }
-    }
-}
-
-.comments {
-  &__content-container {
+    &__content-container {
     display: flex;
     padding: 1rem;
     border-top: 1px solid $mercury;
@@ -125,6 +82,54 @@
     justify-content: space-between;
   }
   &__content-text {
+    @include text.body-copy-mobile;
     margin: 0;
   }
 }
+
+/* Media queries for tablet */
+
+@include breakpoints.medium {
+  .comments {
+    &__wrapper {
+      justify-content: space-evenly;
+    }
+    &__input-btn-container {
+      display: flex;
+      align-items: center;
+    }
+    &__text-input {
+      width: 60vw;
+      height: 2.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0;
+    }
+    &__btn {
+      width: 20vw;
+      height: 2.5rem;
+      background-position: 6%;
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+/* Media queries for desktop */
+
+@include breakpoints.large {
+  .comments {
+    &__total {
+      padding-left: 7rem;
+    }
+    &__wrapper {
+      justify-content: flex-end;
+    }
+    &__text-input {
+      width: 38vw;
+    }
+    &__img {
+      margin-right: 0.5rem;
+    }
+  }
+}
+

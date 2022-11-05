@@ -28,13 +28,13 @@ const App = () => {
   return (
     <>
       <Header />
-      <section className="app__container">
-        <div className="">
+      <section className="app">
+        <div className="app__wrapper">
           <MainContent videoDetails={videoDetails} />
           <Comments comments={videoDetails.comments} />
         </div>
-        <div>
-        <VideoList videos={videos} onClick={handleClick} />
+        <div className="app__wrapper">
+          <VideoList videos={videos} onClick={handleClick} />
         </div>
       </section>
     </>

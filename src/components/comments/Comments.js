@@ -22,16 +22,16 @@ const Comments = ({comments}) => {
           </div>
         </div>
       </section>
-      {/* <div className="comments__content-container">
+      <div className="comments__content-container">
           <div className="comments__content-logo"></div>
           <div className="comments__content-wrapper">
             <div className="comments__content">
-              <h3 className="comments__content-name">{comments.name}</h3>
-              <p className="comments__content-date">{comments.timestamp}</p>
+              <h3 className="comments__content-name">Name</h3>
+              <p className="comments__content-date">Timestamp</p>
             </div>
-            <p className="comments__content-text">{comments.comment}</p>
+            <p className="comments__content-text">Comment</p>
           </div>
-      </div> */}
+      </div>
     </>
   );
 }

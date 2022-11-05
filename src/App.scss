@@ -6,8 +6,9 @@
 
  @include breakpoints.large {
      .app {
-         &__container {
              display: flex;
+             &__wrapper {
+                 width: 60%;
+             }
          }
-     }
  }
