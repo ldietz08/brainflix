@@ -1,0 +1,13 @@
+@use "./styles/partials/colors" as *;
+@use "./styles/partials/breakpoints" as breakpoints;
+@use "./styles/partials/text-styles" as text;
+@use "./styles/partials/resets";
+@use "./styles/partials/fonts";
+
+ @include breakpoints.large {
+     .app {
+         &__container {
+             display: flex;
+         }
+     }
+ }

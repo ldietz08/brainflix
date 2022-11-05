@@ -1,10 +1,10 @@
 import React from "react";
 import "./VideoList.scss";
 
-const VideoList = (props) => {
+const VideoList = ({ videos, onClick }) => {
   return (
     <aside className="videoList__container">
-      {props.videos.map((video) => (
+      {videos.map((video) => (
         <>
           <div className="videoList__item">
             <img
@@ -12,6 +12,7 @@ const VideoList = (props) => {
               src={video.image}
               alt={video.title}
               className="videoList__thumbnail"
+              onClick={(clickEvent) => onClick(clickEvent, video.id)}
             />
           </div>
           <div className="videoList__item">

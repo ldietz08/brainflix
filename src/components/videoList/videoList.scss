@@ -5,13 +5,8 @@
 @use "../../styles/partials/fonts";
 
 .videoList {
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-  }
   &__item {
     padding-left: 0.5rem;
-    width: 50%;
   }
   &__title {
     @include text.subheader-mobile;
@@ -24,6 +19,8 @@
     border-radius: 0.375rem;
   }
 }
+
+// @include breakpoints
 
   // &__list {
   //     padding: 1rem;

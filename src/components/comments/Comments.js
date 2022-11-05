@@ -1,12 +1,11 @@
 import React from "react";
 import "./Comments.scss";
-import CommentsCard from "./CommentsCard";
 
-const Comments = () => {
+const Comments = ({comments}) => {
   return (
     <>
       <section className="comments__container">
-        <p className="comments__total">3 comments</p>
+        <p className="comments__total">{comments.length} comments</p>
         <div className="comments__wrapper">
           <div className="comments__img"></div>
           <div className="comments__input-btn-container">
@@ -23,9 +22,20 @@ const Comments = () => {
           </div>
         </div>
       </section>
-      <CommentsCard />
+      {/* <div className="comments__content-container">
+          <div className="comments__content-logo"></div>
+          <div className="comments__content-wrapper">
+            <div className="comments__content">
+              <h3 className="comments__content-name">{comments.name}</h3>
+              <p className="comments__content-date">{comments.timestamp}</p>
+            </div>
+            <p className="comments__content-text">{comments.comment}</p>
+          </div>
+      </div> */}
     </>
   );
 }
 
 export default Comments;
+
+
