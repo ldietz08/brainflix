@@ -1,6 +1,7 @@
 import "./App.scss"
 import Header from "./components/header/Header.js";
 import MainContent from "./components/mainContent/MainContent.js";
+import CommentBox from "./components/comments/CommentBox";
 import Comments from "./components/comments/Comments";
 import VideoList from "./components/videoList/VideoList.js";
 import { useState } from "react";
@@ -31,6 +32,7 @@ const App = () => {
       <section className="app">
         <div className="app__wrapper">
           <MainContent videoDetails={videoDetails} />
+          <CommentBox comments={videoDetails.comments} />
           <Comments comments={videoDetails.comments} />
         </div>
         <div className="app__wrapper">

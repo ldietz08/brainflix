@@ -28,7 +28,7 @@
     justify-content: space-between;
     border-top: 1px solid $mercury;
     border-bottom: 1px solid $mercury;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   &__details-container {
     display: flex;
@@ -40,25 +40,24 @@
     display: inline-block;
     margin-bottom: 1rem;
   }
-  &__metrics-views {
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
   &__details-date,
   &__metrics-views,
   &__metrics-likes {
+    @include text.body-copy-mobile;
     color: $silver;
   }
   &__metrics-views,
   &__metrics-likes {
-    margin-left: 0.5rem;
+    margin: 0.5rem
   }
   &__metrics-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
   }
   &__metrics {
+    display: flex;
+    align-items: center;
     padding-right: 1.5rem;
   }
   &__description-text {
@@ -107,12 +106,12 @@
     background-color: $dark-black;
     width: 100vw;
     &__content {
-      width: 80%;
+      width: 70%;
     }
   }
   .video {
     &__description {
-      padding-left: 8rem;
+      padding-left: 7rem;
       padding-right: 0;
       margin: 0;
     }

@@ -5,15 +5,16 @@
 @use "../../styles/partials/fonts";
 
 .comments {
-  &__container {
-    padding: 0 1rem;
-    height: 35vh;
-  }
   &__total {
     @include text.body-copy-mobile;
+    color: $black;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0.5rem;
+  }
+  &__container {
+    padding: 0 1rem;
+    height: 35vh;
   }
   &__wrapper {
     display: flex;
@@ -30,7 +31,6 @@
   }
   &__input-title {
     @include text.labels-buttons-mobile;
-    font-size: 0.6rem;
     font-weight: 600;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -40,11 +40,15 @@
     @include text.body-copy-mobile;
     font-family: Avenir;
     margin-bottom: 1rem;
-    padding: 0.5rem 6rem 3rem 0.5rem;
+    padding: 0.5rem 5.5rem 3rem 0.5rem;
     color: $black;
     border: 1px solid $mercury;
     background-color: $alabaster;
     border-radius: 0.25rem;
+    &:focus {
+      outline: 1px solid $blue;
+      box-shadow: 0 0 0.5rem #76a7db;
+    }
   }
   &__btn {
     @include text.labels-buttons-mobile;
@@ -61,9 +65,13 @@
     background-repeat: no-repeat;
     background-position: 5%;
   }
-    &__content-container {
+  &__container-main {
     display: flex;
-    padding: 1rem;
+}
+  &__content-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
     border-top: 1px solid $mercury;
     border-bottom: 1px solid $mercury;
   }
@@ -80,10 +88,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  &__content-text {
-    @include text.body-copy-mobile;
-    margin: 0;
+    &-name {
+      @include text.subheader-mobile;
+      color: $black;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    &-date {
+      color: $silver;
+      margin-bottom: 0;
+    }
+    &-text {
+      @include text.body-copy-mobile;
+      color: $black;
+      margin-top: 0.5rem;
+    }
   }
 }
 
@@ -91,6 +110,9 @@
 
 @include breakpoints.medium {
   .comments {
+    &__container {
+      height: 15vh;
+    }
     &__wrapper {
       justify-content: space-evenly;
     }
@@ -125,11 +147,13 @@
       justify-content: flex-end;
     }
     &__text-input {
-      width: 38vw;
+      width: 30vw;
     }
     &__img {
-      margin-right: 0.5rem;
+      margin-right: 1rem;
+    }
+    &__btn {
+      width: 15vw;
     }
   }
 }
-

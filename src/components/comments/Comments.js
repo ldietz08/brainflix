@@ -1,41 +1,46 @@
 import React from "react";
 import "./Comments.scss";
 
-const Comments = ({comments}) => {
+const Comments = ({ comments }) => {
   return (
     <>
-      <section className="comments__container">
-        <p className="comments__total">{comments.length} comments</p>
-        <div className="comments__wrapper">
-          <div className="comments__img"></div>
-          <div className="comments__input-btn-container">
-            <div className="comments__input">
-              <p className="comments__input-title">Join the conversation</p>
-              <textarea
-                className="comments__text-input"
-                defaultValue="Add a new comment"
-              ></textarea>
-            </div>
-            <div className="comments__btn-wrapper">
-              <button className="comments__btn">Comment</button>
-            </div>
-          </div>
+      {comments.length > 0 ? (
+        <div className="comments__content-container">
+          {comments.map((comment) => (
+            <>
+              <div className="comments__container-main">
+                <div className="comments__content-logo"></div>
+                <div className="comments__item">
+                  <div className="comments__content-wrapper">
+                    <div className="comments__content">
+                      <h3 className="comments__content-name" key={comment.id}>
+                        {comment.name}
+                      </h3>
+                      <p className="comments__content-date">
+                        {new Date(comment.timestamp).toLocaleDateString(
+                          "en-US",
+                          {
+                            year: "numeric",
+                            month: "2-digit",
+                            day: "2-digit",
+                          }
+                        )}
+                      </p>
+                    </div>
+                    <p className="comments__content-text">{comment.comment}</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          ))}
         </div>
-      </section>
-      <div className="comments__content-container">
-          <div className="comments__content-logo"></div>
-          <div className="comments__content-wrapper">
-            <div className="comments__content">
-              <h3 className="comments__content-name">Name</h3>
-              <p className="comments__content-date">Timestamp</p>
-            </div>
-            <p className="comments__content-text">Comment</p>
-          </div>
-      </div>
+      ) : (
+        <section className="comments__content-container">
+          <p className="comments__empty">No Comments</p>
+        </section>
+      )}
     </>
   );
-}
+};
 
 export default Comments;
-
-
