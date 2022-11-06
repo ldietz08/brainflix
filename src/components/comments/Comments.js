@@ -4,6 +4,7 @@ import "./Comments.scss";
 const Comments = ({ comments }) => {
   return (
     <>
+    {/* Ternary operator - If array contains comments render them, otherwise render alternative JSX */}
       {comments.length > 0 ? (
         <div className="comments__content-container">
           {comments.map((comment) => (
@@ -13,10 +14,13 @@ const Comments = ({ comments }) => {
                 <div className="comments__item">
                   <div className="comments__content-wrapper">
                     <div className="comments__content">
-                      <h3 className="comments__content-name" key={comment.id}>
+                      <h3 className="comments__content-name" key={comment.name}>
                         {comment.name}
                       </h3>
-                      <p className="comments__content-date">
+                      <p
+                        className="comments__content-date"
+                        key={comment.timestamp}
+                      >
                         {new Date(comment.timestamp).toLocaleDateString(
                           "en-US",
                           {
@@ -27,7 +31,9 @@ const Comments = ({ comments }) => {
                         )}
                       </p>
                     </div>
-                    <p className="comments__content-text">{comment.comment}</p>
+                    <p className="comments__content-text" key={comment.comment}>
+                      {comment.comment}
+                    </p>
                   </div>
                 </div>
               </div>

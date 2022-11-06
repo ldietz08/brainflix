@@ -14,11 +14,13 @@
   }
   &__container {
     padding: 0 1rem;
-    height: 35vh;
+    height: 37vh;
   }
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $mercury;
   }
   &__img {
     background-image: url(../../assets/Images/Mohan-muruge.jpg);
@@ -32,7 +34,7 @@
   &__input-title {
     @include text.labels-buttons-mobile;
     font-weight: 600;
-    margin-bottom: 0;
+    margin-bottom: 0.2rem;
     text-transform: uppercase;
     color: $silver;
   }
@@ -57,7 +59,7 @@
     font-weight: 400;
     background-color: $blue;
     border-radius: 0.25rem;
-    height: 2rem;
+    height: 2.5rem;
     border: none;
     text-transform: uppercase;
     background-image: url(../../assets/icons/add_comment.svg);
@@ -65,29 +67,30 @@
     background-repeat: no-repeat;
     background-position: 5%;
   }
+  //Individual comments styling
   &__container-main {
     display: flex;
-}
-  &__content-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    border-top: 1px solid $mercury;
     border-bottom: 1px solid $mercury;
-  }
-  &__content-logo {
-    flex-shrink: 0;
-    background-color: $mercury;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: 1rem;
-    margin-right: 0.5rem;
   }
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+    }
+    &-logo {
+      flex-shrink: 0;
+      background-color: $mercury;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-top: 0.8rem;
+      margin-right: 1rem;
+    }
     &-name {
       @include text.subheader-mobile;
       color: $black;
@@ -95,6 +98,8 @@
       margin-bottom: 0;
     }
     &-date {
+      @include text.subheader-mobile;
+      font-weight: 400;
       color: $silver;
       margin-bottom: 0;
     }
@@ -111,9 +116,22 @@
 @include breakpoints.medium {
   .comments {
     &__container {
-      height: 15vh;
+      height: 20vh;
+      padding: 0 2rem;
+    }
+    &__img {
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+    }
+    &__content-container {
+      padding: 0 2rem;
+    }
+    &__container-main {
+      padding: 0.5rem 0;
     }
     &__wrapper {
+      padding-bottom: 0.5rem;
+      align-items: center;
       justify-content: space-evenly;
     }
     &__input-btn-container {
@@ -128,7 +146,6 @@
     }
     &__btn {
       width: 20vw;
-      height: 2.5rem;
       background-position: 6%;
       margin-left: 1.5rem;
       margin-top: 0.5rem;
@@ -140,11 +157,15 @@
 
 @include breakpoints.large {
   .comments {
+    &__container {
+      padding-right: 0;
+      padding-left: 2rem;
+    }
     &__total {
-      padding-left: 7rem;
+      padding-left: 5rem;
     }
     &__wrapper {
-      justify-content: flex-end;
+      justify-content: center;
     }
     &__text-input {
       width: 30vw;
@@ -153,7 +174,14 @@
       margin-right: 1rem;
     }
     &__btn {
-      width: 15vw;
+      width: 13vw;
+    }
+    &__content-container {
+      padding-left: 5rem;
+      padding-right: 0;
+    }
+    &__content-wrapper {
+      padding-right: 0.5rem;
     }
   }
 }

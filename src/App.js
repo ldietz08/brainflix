@@ -13,14 +13,13 @@ const App = () => {
     "84e96018-4022-434e-80bf-000ce4cd12b8"
   );
 
-  //Set state for video list, defaultVidId is retrieved from state above
-  //State gets passed as a prop to one of the components
-  // and that component renders the prop using html tags
+  //Set state for video list
   const [videos, setVideos] = useState(getVideos(defaultVidId));
   const [videoDetails, setVideoDetails] = useState(
     getVideoDetails(defaultVidId)
   );
 
+  //Click handler function
   const handleClick = (clickEvent, vidIdClickedOn) => {
      setDefaultVidId(vidIdClickedOn);
      setVideos(getVideos(vidIdClickedOn));

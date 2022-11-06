@@ -4,16 +4,12 @@
 @use "../../styles/partials/resets";
 @use "../../styles/partials/fonts";
 
-.mainVideo {
-  &__content {
+.video {
+  &__player {
     width: 100vw;
     aspect-ratio: 16/9;
     background-color: $dark-black;
-    max-height: 40%;
   }
-}
-
-.video {
   &__description {
     padding: 1rem;
   }
@@ -48,7 +44,7 @@
   }
   &__metrics-views,
   &__metrics-likes {
-    margin: 0.5rem
+    margin: 0.5rem;
   }
   &__metrics-container {
     display: flex;
@@ -71,14 +67,23 @@
 
 @include breakpoints.medium {
   .video {
+    &__player {
+      height: 60vh;
+    }
     &__description {
-      padding: 1.5rem;
+      padding: 1rem 2rem;
+    }
+    &__description-text {
+      @include text.body-copy-desktop-tablet;
     }
     &__title {
+      @include text.page-header-desktop-tablet;
+      font-weight: 600;
       padding-bottom: 0;
     }
     &__details-wrapper {
       border-top: none;
+      align-items: center;
       justify-content: space-between;
       padding-bottom: 0;
     }
@@ -88,6 +93,7 @@
     }
     &__details-creator {
       margin-right: 1rem;
+      margin-bottom: 0;
     }
     &__details-date,
     &__metrics-views,
@@ -100,16 +106,14 @@
 /* Media queries for desktop */
 
 @include breakpoints.large {
-  .mainVideo {
+  .video {
     display: flex;
     justify-content: center;
     background-color: $dark-black;
     width: 100vw;
-    &__content {
-      width: 70%;
+    &__player {
+      height: 75vh;
     }
-  }
-  .video {
     &__description {
       padding-left: 7rem;
       padding-right: 0;

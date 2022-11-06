@@ -4,6 +4,8 @@
 @use "./styles/partials/resets";
 @use "./styles/partials/fonts";
 
+// Media query for desktop layout
+
  @include breakpoints.large {
      .app {
              display: flex;
