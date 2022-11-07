@@ -1,4 +1,4 @@
-import "./MainContent.scss";
+import "./mainContent.scss";
 import heartSymbol from "../../assets/icons/likes.svg";
 import eyeSymbol from "../../assets/icons/views.svg";
 

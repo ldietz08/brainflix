@@ -1,5 +1,5 @@
 import React from "react";
-import "./Comments.scss";
+import "./comments.scss";
 
 const Comments = ({ comments }) => {
   return (
