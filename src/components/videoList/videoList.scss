@@ -74,8 +74,11 @@
 @include breakpoints.large {
   .videoList {
     &__container {
-      margin-top: 29rem;
+      margin-top: 30.5rem;
       border-left: 1px solid $mercury;
+    }
+    &__title-main {
+        padding-top: 2rem;
     }
   }
 }

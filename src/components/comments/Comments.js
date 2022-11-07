@@ -4,40 +4,28 @@ import "./Comments.scss";
 const Comments = ({ comments }) => {
   return (
     <>
-    {/* Ternary operator - If array contains comments render them, otherwise render alternative JSX */}
+      {/* Ternary operator - If array contains comments render them, otherwise render alternative JSX */}
       {comments.length > 0 ? (
         <div className="comments__content-container">
           {comments.map((comment) => (
-            <>
-              <div className="comments__container-main">
-                <div className="comments__content-logo"></div>
-                <div className="comments__item">
-                  <div className="comments__content-wrapper">
-                    <div className="comments__content">
-                      <h3 className="comments__content-name" key={comment.name}>
-                        {comment.name}
-                      </h3>
-                      <p
-                        className="comments__content-date"
-                        key={comment.timestamp}
-                      >
-                        {new Date(comment.timestamp).toLocaleDateString(
-                          "en-US",
-                          {
-                            year: "numeric",
-                            month: "2-digit",
-                            day: "2-digit",
-                          }
-                        )}
-                      </p>
-                    </div>
-                    <p className="comments__content-text" key={comment.comment}>
-                      {comment.comment}
+            <div className="comments__container-main" key={comment.id}>
+              <div className="comments__content-logo"></div>
+              <div className="comments__item">
+                <div className="comments__content-wrapper">
+                  <div className="comments__content">
+                    <h3 className="comments__content-name">{comment.name}</h3>
+                    <p className="comments__content-date">
+                      {new Date(comment.timestamp).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                      })}
                     </p>
                   </div>
+                  <p className="comments__content-text">{comment.comment}</p>
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       ) : (
