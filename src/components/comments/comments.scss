@@ -67,7 +67,7 @@
     background-repeat: no-repeat;
     background-position: 5%;
   }
-  //Individual comments styling
+  //Styling for individual comments
   &__container-main {
     display: flex;
     border-bottom: 1px solid $mercury;
@@ -123,11 +123,21 @@
       margin-top: 0.5rem;
       margin-right: 1rem;
     }
-    &__content-container {
-      padding: 0 2rem;
-    }
-    &__container-main {
-      padding: 0.5rem 0;
+    &__content {
+      &-container {
+        padding: 0 2rem;
+      }
+      &-main {
+        padding: 0.5rem 0;
+      }
+      &-text,
+      &-name,
+      &-date {
+        @include text.body-copy-desktop-tablet;
+      }
+      &-name {
+        font-weight: 600;
+      }
     }
     &__wrapper {
       padding-bottom: 0.5rem;
@@ -139,7 +149,7 @@
       align-items: center;
     }
     &__text-input {
-      width: 60vw;
+      width: 61.5vw;
       height: 2.5rem;
       padding-top: 0.5rem;
       padding-bottom: 0;
@@ -148,7 +158,7 @@
       width: 20vw;
       background-position: 6%;
       margin-left: 1.5rem;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
     }
   }
 }
@@ -158,11 +168,11 @@
 @include breakpoints.large {
   .comments {
     &__container {
-      padding-right: 2rem;
+      padding-right: 1.5rem;
       padding-left: 1rem;
     }
     &__total {
-      padding-left: 6rem;
+      padding-left: 5.5rem;
     }
     &__wrapper {
       border-bottom: none;
@@ -172,21 +182,27 @@
       width: 35vw;
     }
     &__img {
-      margin-right: 1rem;
+      margin-right: 1.5rem;
     }
     &__btn {
       width: 13vw;
     }
     &__container-main {
+      padding: 0.5rem 0;
       border-top: 1px solid $mercury;
       border-bottom: none;
     }
-    &__content-container {
-      padding-left: 6.5rem;
-      padding-right: 0;
-    }
-    &__content-wrapper {
-      padding-right: 0.5rem;
+    &__content {
+      &-container {
+        padding-left: 6.5rem;
+        padding-right: 0;
+      }
+      &-wrapper {
+        padding-right: 1.5rem;
+      }
+      &-logo {
+        margin-right: 2rem;
+      }
     }
   }
 }
