@@ -1,11 +1,8 @@
-@use "./styles/partials/colors" as *;
 @use "./styles/partials/breakpoints" as breakpoints;
-@use "./styles/partials/text-styles" as text;
 @use "./styles/partials/resets";
-@use "./styles/partials/fonts";
+
 
 // Media query for desktop layout
-
  @include breakpoints.large {
      .app {
          display: flex;

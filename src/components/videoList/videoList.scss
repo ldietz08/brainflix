@@ -75,7 +75,19 @@
   .videoList {
     &__container {
       width: 35vw;
+      padding-bottom: 3rem;
       border-left: 1px solid $mercury;
+    }
+    &__thumbnail {
+      height: 4.5rem;
+      width: 7rem;
+    }
+    &__title {
+        @include text.subheader-desktop-tablet;
+        font-weight: 600;
+    }
+    &__creator {
+        @include text.body-copy-desktop-tablet;
     }
     &__title-main {
       padding-top: 1.5rem;
