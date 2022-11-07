@@ -49,8 +49,8 @@
 @include breakpoints.medium {
   .videoList {
     &__container {
-        padding-left: 1rem;
-        padding-bottom: 0.5em;
+      padding-left: 1rem;
+      padding-bottom: 0.5em;
     }
     &__title-main {
       @include text.section-header-desktop-tablet;
@@ -74,11 +74,11 @@
 @include breakpoints.large {
   .videoList {
     &__container {
-      margin-top: 30.5rem;
+      width: 35vw;
       border-left: 1px solid $mercury;
     }
     &__title-main {
-        padding-top: 2rem;
+      padding-top: 1.5rem;
     }
   }
 }

@@ -1,5 +1,6 @@
-import "./App.scss"
+import "./App.scss";
 import Header from "./components/header/Header.js";
+import MainVideo from "./components/mainContent/MainVideo.js";
 import MainContent from "./components/mainContent/MainContent.js";
 import CommentBox from "./components/comments/CommentBox";
 import Comments from "./components/comments/Comments";
@@ -21,13 +22,14 @@ const App = () => {
 
   //Click handler function
   const handleClick = (clickEvent, vidIdClickedOn) => {
-     setDefaultVidId(vidIdClickedOn);
-     setVideos(getVideos(vidIdClickedOn));
-     setVideoDetails(getVideoDetails(vidIdClickedOn));
+    setDefaultVidId(vidIdClickedOn);
+    setVideos(getVideos(vidIdClickedOn));
+    setVideoDetails(getVideoDetails(vidIdClickedOn));
   };
   return (
     <>
       <Header />
+      <MainVideo videoDetails={videoDetails} />
       <section className="app">
         <div className="app__wrapper">
           <MainContent videoDetails={videoDetails} />

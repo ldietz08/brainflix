@@ -8,9 +8,6 @@
 
  @include breakpoints.large {
      .app {
-             display: flex;
-             &__wrapper {
-                 width: 60%;
-             }
+         display: flex;
          }
  }

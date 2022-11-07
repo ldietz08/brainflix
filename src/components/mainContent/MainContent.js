@@ -2,11 +2,7 @@ import "./MainContent.scss";
 import heartSymbol from "../../assets/icons/likes.svg";
 import eyeSymbol from "../../assets/icons/views.svg";
 
-//destructuring -> const/let {key1, key2, key3} = variable;
 const MainContent = ({ videoDetails }) => {
-  //rest holds every other property that is not being destructured
-  //spread operator makes a copy of the entire object
-
   const {
     title,
     channel,
@@ -20,9 +16,6 @@ const MainContent = ({ videoDetails }) => {
 
   return (
     <>
-      <main className="video">
-        <video className="video__player" controls poster={image}></video>
-      </main>
       <div className="video__description">
         <h1 className="video__title">{title}</h1>
         <div className="video__details-wrapper">

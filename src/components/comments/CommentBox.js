@@ -1,7 +1,7 @@
 import React from "react";
 import "./Comments.scss";
 
-const CommentBox = ({comments}) => {
+const CommentBox = ({ comments }) => {
   return (
     <section className="comments__container">
       <p className="comments__total">{comments.length} comments</p>
@@ -22,6 +22,6 @@ const CommentBox = ({comments}) => {
       </div>
     </section>
   );
-}
+};
 
-export default CommentBox
+export default CommentBox;
