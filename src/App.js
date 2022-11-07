@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./app.scss";
 import Header from "./components/header/Header.js";
 import MainVideo from "./components/mainContent/MainVideo.js";
 import MainContent from "./components/mainContent/MainContent.js";

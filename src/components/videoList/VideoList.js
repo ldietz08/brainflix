@@ -1,5 +1,5 @@
 import React from "react";
-import "./VideoList.scss";
+import "./videoList.scss";
 
 const VideoList = ({ videos, onClick }) => {
   return (

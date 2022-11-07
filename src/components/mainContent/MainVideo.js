@@ -1,4 +1,4 @@
-import "./MainContent.scss";
+import "./mainContent.scss";
 
 const MainVideo = ({ videoDetails }) => {
   const { image } = videoDetails;
