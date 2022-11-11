@@ -1,11 +1,9 @@
 import "./mainContent.scss";
 
-const MainVideo = ({ videoDetails }) => {
-  const { image } = videoDetails;
-
+const MainVideo = ({ videos }) => {
   return (
     <main className="video">
-      <video className="video__player" controls poster={image}></video>
+      <video className="video__player" controls poster={videos.image}></video>
     </main>
   );
 };

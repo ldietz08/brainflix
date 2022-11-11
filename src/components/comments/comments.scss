@@ -14,7 +14,6 @@
   }
   &__container {
     padding: 0 1rem;
-    height: 37vh;
   }
   &__wrapper {
     display: flex;
@@ -56,6 +55,7 @@
     @include text.labels-buttons-mobile;
     width: 100%;
     color: $white;
+    font-family: "Avenir";
     font-weight: 400;
     background-color: $blue;
     border-radius: 0.25rem;

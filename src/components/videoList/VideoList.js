@@ -1,20 +1,21 @@
-import React from "react";
 import "./videoList.scss";
+// import { Link } from 'react-router-dom';
 
-const VideoList = ({ videos, onClick }) => {
+const VideoList = ({videos}) => {
   return (
     <>
       <aside className="videoList__container">
         <h4 className="videoList__title-main">Next Videos</h4>
         {videos.map((video) => (
           <div className="videoList__items-wrapper" key={video.id}>
+            {/* <Link to= {`/videos/${videos.id}`}> */}
             <div className="videoList__item">
               <img
                 src={video.image}
                 alt={video.title}
                 className="videoList__thumbnail"
-                onClick={(clickEvent) => onClick(clickEvent, video.id)}
               />
+              {/* </Link> */}
             </div>
             <div className="videoList__item">
               <h4 className="videoList__title">{video.title}</h4>

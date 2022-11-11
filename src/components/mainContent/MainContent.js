@@ -2,18 +2,17 @@ import "./mainContent.scss";
 import heartSymbol from "../../assets/icons/likes.svg";
 import eyeSymbol from "../../assets/icons/views.svg";
 
-const MainContent = ({ videoDetails }) => {
+const MainContent = ({videos}) => {
   const {
     title,
     channel,
-    image,
     timestamp,
     views,
     likes,
     description,
-    ...rest
-  } = videoDetails;
+  } = videos;
 
+ 
   return (
     <>
       <div className="video__description">
