@@ -46,6 +46,7 @@
     border: 1px solid $mercury;
     background-color: $alabaster;
     border-radius: 0.25rem;
+    resize: none;
     &:focus {
       outline: 1px solid $blue;
       box-shadow: 0 0 0.5rem #76a7db;
