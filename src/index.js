@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import Home from "./pages/home/Home.js";
 import Upload from "./pages/upload/Upload.js"
 import Publish from "./pages/publish/Publish"
-// import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

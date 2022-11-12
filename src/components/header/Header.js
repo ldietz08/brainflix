@@ -26,7 +26,7 @@ function Header() {
           <div className="header__img-wrapper"></div>
         </div>
         <div className="header__btn-wrapper">
-          <Link to={"/upload"} className="header__btn">
+          <Link to={"/upload"} className="header__btn-link">
             <button className="header__btn">Upload</button>
           </Link>
         </div>

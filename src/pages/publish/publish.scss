@@ -1,0 +1,38 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/resets";
+@use "../../styles/partials/fonts";
+
+.publish {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $dark-blue;
+  height: 90vh;
+  &__title {
+    color: $blue;
+    padding: 1rem;
+      &:hover {
+      transition: transform 0.5s ease;
+      transform: scale(1.5);
+  }
+  }
+}
+
+.button {
+  width: 100%;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $blue;
+  border: none;
+  font-weight: 700;
+  padding: 1rem;
+  height: 10vh;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+      width: 100%;
+  }
+}

@@ -1,8 +1,8 @@
-import React from 'react'
-import './upload.scss'
-import Header from "../../components/header/Header"
+import React from "react";
+import "./upload.scss";
+import Header from "../../components/header/Header";
 import UploadThumbnail from "../../assets/Images/Upload-video-preview.jpg";
-
+import { Link } from "react-router-dom";
 
 function Upload() {
   return (
@@ -35,8 +35,12 @@ function Upload() {
               ></textarea>
             </div>
             <div className="btn__wrapper">
-              <button className="btn--publish">Publish</button>
-              <button className="btn--cancel">Cancel</button>
+              <Link to={"/publish"} className="btn__link">
+                <button className="btn--publish">Publish</button>
+              </Link>
+              <Link to={"/"} className="btn__link">
+                <button className="btn--cancel">Cancel</button>
+              </Link>
             </div>
           </section>
         </section>
@@ -45,4 +49,4 @@ function Upload() {
   );
 }
 
-export default Upload
+export default Upload;

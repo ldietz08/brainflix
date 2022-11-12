@@ -4,12 +4,13 @@ import MainContent from "../../components/mainContent/MainContent.js";
 import CommentBox from "../../components/comments/CommentBox";
 import Comments from "../../components/comments/Comments";
 import VideoList from "../../components/videoList/VideoList.js";
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Home = () => {
   const videoDetailsUrl = `https://project-2-api.herokuapp.com/videos/?api_key=01d6c96d-6281-4691-b1ea-b8d697ef7ef9`;
+  const apiKey = `01d6c96d-6281-4691-b1ea-b8d697ef7ef9`;
   const defaultVidId = `84e96018-4022-434e-80bf-000ce4cd12b8`;
 
   const [videoId, setVideoId] = useState([
@@ -18,7 +19,7 @@ const Home = () => {
   const [videoDetails, setVideoDetails] = useState([]);
   const [videos, setVideos] = useState([]);
 
-  const params = useParams();
+  // const params = useParams();
 
   useEffect(() => {
     const getVideoList = async (videoId) => {
@@ -27,11 +28,13 @@ const Home = () => {
         const filteredVideos = data.filter((video) => video.id !== videoId);
 
         const defaultVideo = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${defaultVidId}?api_key=01d6c96d-6281-4691-b1ea-b8d697ef7ef9`
+          `https://project-2-api.herokuapp.com/videos/${defaultVidId}?api_key=${apiKey}`
         );
+
         setVideoId(data[0].id);
         setVideos(filteredVideos);
         setVideoDetails(defaultVideo.data);
+
       } catch (error) {
         console.log("An error has occurred", error);
       }
@@ -39,20 +42,27 @@ const Home = () => {
     getVideoList(videoId);
   }, []);
 
-  useEffect(() => {
 
-    if(params.videoId) {
-      const getVidId = async(videoId) => {
-        try {
-          const { data } = await axios.get(`https://project-2-api.herokuapp.com/videos/${params.videoId}?api_key=01d6c96d-6281-4691-b1ea-b8d697ef7ef9`);
-          setVideoDetails(data)
-        } catch (error) {
-                console.log("An error has occurred", error);
-        }
-      }
-      getVidId(videoId);
-  }
-  }, []);
+  // useEffect(() => {
+  //   setVideoId(params.videoId)
+  // }, [params.videoId]);
+
+  // useEffect(() => {
+  //   if(params.videoId) {
+  //     const getVidId = async (videoId) => {
+  //       try {
+  //         const selectedVideo = await axios.get(`https://project-2-api.herokuapp.com/videos/${params.videoId}?api_key=${apiKey}`);
+
+  //         setVideoId(params.videoId)
+  //         setVideoDetails(selectedVideo.data)
+
+  //       } catch (error) {
+  //               console.log("An error has occurred", error);
+  //       }
+  //     }
+  //     getVidId(videoId);
+  // }
+  // }, []);
 
   return (
     <>

@@ -78,6 +78,9 @@
 }
 
 .btn {
+  &__link {
+    text-decoration: none;
+  }
   &--publish {
     @include text.labels-buttons-mobile;
     color: $white;
