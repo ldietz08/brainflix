@@ -4,7 +4,6 @@ import MainContent from "../../components/mainContent/MainContent.js";
 import CommentBox from "../../components/comments/CommentBox";
 import Comments from "../../components/comments/Comments";
 import VideoList from "../../components/videoList/VideoList.js";
-// import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -19,50 +18,23 @@ const Home = () => {
   const [videoDetails, setVideoDetails] = useState([]);
   const [videos, setVideos] = useState([]);
 
-  // const params = useParams();
-
   useEffect(() => {
-    const getVideoList = async (videoId) => {
+    const getVideoList = async () => {
       try {
         const { data } = await axios.get(videoDetailsUrl);
-        const filteredVideos = data.filter((video) => video.id !== videoId);
-
         const defaultVideo = await axios.get(
           `https://project-2-api.herokuapp.com/videos/${defaultVidId}?api_key=${apiKey}`
         );
-
         setVideoId(data[0].id);
-        setVideos(filteredVideos);
+        setVideos(data);
         setVideoDetails(defaultVideo.data);
 
       } catch (error) {
         console.log("An error has occurred", error);
       }
     };
-    getVideoList(videoId);
+    getVideoList();
   }, []);
-
-
-  // useEffect(() => {
-  //   setVideoId(params.videoId)
-  // }, [params.videoId]);
-
-  // useEffect(() => {
-  //   if(params.videoId) {
-  //     const getVidId = async (videoId) => {
-  //       try {
-  //         const selectedVideo = await axios.get(`https://project-2-api.herokuapp.com/videos/${params.videoId}?api_key=${apiKey}`);
-
-  //         setVideoId(params.videoId)
-  //         setVideoDetails(selectedVideo.data)
-
-  //       } catch (error) {
-  //               console.log("An error has occurred", error);
-  //       }
-  //     }
-  //     getVidId(videoId);
-  // }
-  // }, []);
 
   return (
     <>
@@ -75,7 +47,7 @@ const Home = () => {
           <Comments comments={videoDetails.comments} />
         </div>
         <div className="app__wrapper">
-          <VideoList videos={videos} />
+          <VideoList videos={videos} videoDetails={videoDetails} />
         </div>
       </section>
     </>

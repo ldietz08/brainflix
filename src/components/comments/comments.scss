@@ -101,6 +101,7 @@
     &-date {
       @include text.subheader-mobile;
       font-weight: 400;
+      font-size: .875rem;
       color: $silver;
       margin-bottom: 0;
     }

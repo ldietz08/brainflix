@@ -12,7 +12,7 @@ function Upload() {
         <section className="upload__title-wrapper">
           <h1 className="upload__title">Upload Video</h1>
         </section>
-        <section class="upload__wrapper">
+        <section className="upload__wrapper">
           <main className="hero">
             <p className="hero__title">Video Thumbnail</p>
             <img className="hero__img" src={UploadThumbnail}></img>
@@ -23,7 +23,7 @@ function Upload() {
               <textarea
                 className="input__body--title"
                 name="title"
-                defaultValue="Add a title to your video"
+                placeholder="Add a title to your video"
               ></textarea>
             </div>
             <div className="input__wrapper">
@@ -31,7 +31,7 @@ function Upload() {
               <textarea
                 className="input__body--description"
                 name="description"
-                defaultValue="Add a description to your video"
+                placeholder="Add a description to your video"
               ></textarea>
             </div>
             <div className="btn__wrapper">

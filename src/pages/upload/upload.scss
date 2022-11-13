@@ -7,11 +7,12 @@
 .upload {
   &__container {
     border-top: 1px solid $mercury;
+    padding: 0 1rem;
   }
   &__title {
     @include text.page-header-mobile;
     font-weight: 600;
-    margin-left: 1rem;
+    margin-top: 1rem;
   }
 }
 
@@ -21,20 +22,15 @@
     color: $silver;
     font-weight: 600;
     text-transform: uppercase;
-    margin-left: 1rem;
     margin-bottom: 0.2rem;
   }
   &__img {
-    width: 100vw;
-    padding: 0 1rem;
-    // border-radius: 0.25rem;
+    width: 100%;
+    border-radius: 0.25rem;
   }
 }
 
 .input {
-  &__container {
-    padding: 1rem;
-  }
   &__label {
     @include text.labels-buttons-mobile;
     font-weight: 600;
