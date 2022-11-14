@@ -17,7 +17,7 @@
   }
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 5%;
     padding-bottom: 1rem;
     border-bottom: 1px solid $mercury;
   }
@@ -143,7 +143,7 @@
     &__wrapper {
       padding-bottom: 0.5rem;
       align-items: center;
-      justify-content: space-evenly;
+      gap: 0;
     }
     &__input-btn-container {
       display: flex;

@@ -1,29 +1,8 @@
 import "./videoList.scss";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
 
 const VideoList = ({ videos, videoDetails }) => {
   const apiKey = `01d6c96d-6281-4691-b1ea-b8d697ef7ef9`;
-  const [selectedVideo, setSelectedVideo] = useState([]);
-  const params = useParams();
-
-  useEffect(() => {
-    if (params.videoId) {
-      const getSelectedVid = async () => {
-        try {
-          const selectedVideo = await axios.get(
-            `https://project-2-api.herokuapp.com/videos/${params.videoId}?api_key=${apiKey}`
-          );
-          setSelectedVideo(selectedVideo.data);
-        } catch (error) {
-          console.log("An error has occurred", error);
-        }
-      };
-      getSelectedVid();
-    }
-  }, [params]);
 
   return (
     <>

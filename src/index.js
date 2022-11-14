@@ -13,10 +13,10 @@ root.render(
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="home" element={<Home />} />
         <Route path=":videoid" element={<Home />} />
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/publish" element={<Publish />} />
+        <Route path="upload" element={<Upload />} />
+        <Route path="publish" element={<Publish />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
