@@ -15,6 +15,7 @@
   }
   &__title {
     @include text.page-header-mobile;
+    color: $black;
     margin: 0;
     padding-bottom: 1rem;
     font-weight: 600;
