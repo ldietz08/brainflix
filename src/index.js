@@ -3,14 +3,12 @@ import ReactDOM from "react-dom/client";
 import Home from "./pages/home/Home.js";
 import Upload from "./pages/upload/Upload.js"
 import Publish from "./pages/publish/Publish"
-// import Header from "./components/header/Header.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />

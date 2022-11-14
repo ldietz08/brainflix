@@ -28,6 +28,7 @@
   &__searchBar-input {
     @include text.labels-buttons-mobile;
     font-weight: 400;
+    font-family: "Avenir";
     background-image: url(../../assets/icons/search.svg);
     background-repeat: no-repeat;
     background-size: 1rem;
@@ -69,7 +70,7 @@
     text-transform: uppercase;
     background-image: url(../../assets/icons/upload.svg);
     background-repeat: no-repeat;
-    background-position: 3%;
+    background-position: 4%;
 
     &:hover {
       background-color: $dark-blue;
