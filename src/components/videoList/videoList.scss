@@ -23,6 +23,7 @@
   &__items-wrapper {
     display: flex;
     align-items: center;
+    text-decoration: none
   }
   &__title {
     @include text.subheader-mobile;
@@ -40,6 +41,7 @@
   }
   &__creator {
     @include text.body-copy-mobile;
+    color: $black;
     margin: 0;
   }
 }

@@ -1,18 +1,18 @@
 import "./mainContent.scss";
 import heartSymbol from "../../assets/icons/likes.svg";
 import eyeSymbol from "../../assets/icons/views.svg";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-const MainContent = ({ videoDetails }) => {
-  const {
-    title,
-    channel,
-    image,
-    timestamp,
-    views,
-    likes,
-    description,
-    ...rest
-  } = videoDetails;
+const MainContent = ({ videos, getSelectedVideo, defaultId }) => {
+  const { title, channel, timestamp, views, likes, description } = videos;
+
+  const params = useParams();
+  const videoId = params.videoid ? params.videoid : defaultId;
+
+  useEffect(() => {
+    getSelectedVideo(videoId);
+  }, [videoId]);
 
   return (
     <>

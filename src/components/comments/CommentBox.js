@@ -1,10 +1,10 @@
 import React from "react";
 import "./comments.scss";
 
-const CommentBox = ({ comments }) => {
+const CommentBox = ({comments}) => {
   return (
     <section className="comments__container">
-      <p className="comments__total">{comments.length} comments</p>
+      <p className="comments__total">{comments?.length} comments</p>
       <div className="comments__wrapper">
         <div className="comments__img"></div>
         <div className="comments__input-btn-container">

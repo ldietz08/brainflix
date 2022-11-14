@@ -55,8 +55,11 @@
     @include text.labels-buttons-mobile;
     color: $white;
     font-weight: 400;
+    font-family: "Avenir";
+    text-decoration: none;
     background-color: $blue;
     border-radius: 0.25rem;
+    margin-left: 0.5rem;
     height: 2.5rem;
     border: none;
     width: 95%;
@@ -67,10 +70,15 @@
     background-image: url(../../assets/icons/upload.svg);
     background-repeat: no-repeat;
     background-position: 3%;
-  }
-  &__btn:hover {
-    background-color: $dark-blue;
-    transition: 0.3s ease;
+
+    &:hover {
+      background-color: $dark-blue;
+      transition: 0.3s ease;
+    }
+    &-link {
+      width: 100%;
+      text-decoration: none;
+    }
   }
 }
 
