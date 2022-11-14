@@ -11,6 +11,7 @@
   }
   &__title {
     @include text.page-header-mobile;
+    color: $black;
     font-weight: 600;
     margin-top: 1rem;
   }
@@ -170,7 +171,7 @@
       }
     }
   }
-    .btn {
+  .btn {
     &--publish {
       width: 12vw;
     }
