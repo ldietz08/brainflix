@@ -124,7 +124,7 @@
   }
   .hero {
     &__img {
-      width: 50vw;
+      width: 50%;
     }
   }
   .btn {
@@ -146,8 +146,21 @@
 
 @include breakpoints.large {
   .upload {
+    &__container {
+      padding: 1rem 4rem;
+    }
     &__wrapper {
       display: flex;
+    }
+  }
+  .hero {
+    &__img {
+      width: 100%;
+    }
+  }
+  .input {
+    &__container {
+      padding: 1rem;
     }
   }
 }
