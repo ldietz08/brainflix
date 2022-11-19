@@ -9,11 +9,10 @@ import axios from "axios";
 import "./home.scss";
 
 const Home = () => {
-  const selectedVideo = (videoId) =>
-    `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`;
+  const BACK_END_URL = "http://localhost:8080";
+  const selectedVideo = (videoId) => `${BACK_END_URL}/videos/${videoId}`;
 
-  const videoDetailsUrl = `https://project-2-api.herokuapp.com/videos?api_key=01d6c96d-6281-4691-b1ea-b8d697ef7ef9`;
-  const apiKey = `01d6c96d-6281-4691-b1ea-b8d697ef7ef9`;
+  const videoDetailsUrl = `${BACK_END_URL}/videos`;
   const defaultVidId = `84e96018-4022-434e-80bf-000ce4cd12b8`;
 
   const [defaultId, setDefaultId] = useState(defaultVidId);
@@ -40,9 +39,7 @@ const Home = () => {
   useEffect(() => {
     const getVideoDetails = async () => {
       try {
-        const { data } = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${defaultId}?api_key=${apiKey}`
-        );
+        const { data } = await axios.get(`${BACK_END_URL}/videos/${defaultId}`);
         setVideoDetails(data);
       } catch (error) {
         console.log(error);

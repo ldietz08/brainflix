@@ -2,7 +2,6 @@ import "./videoList.scss";
 import { Link } from "react-router-dom";
 
 const VideoList = ({ videos, videoDetails }) => {
-  const apiKey = `01d6c96d-6281-4691-b1ea-b8d697ef7ef9`;
 
   return (
     <>

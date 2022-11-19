@@ -67,6 +67,10 @@
     background-size: 1rem;
     background-repeat: no-repeat;
     background-position: 5%;
+    &:hover {
+      background-color: $dark-blue;
+      transition: 0.3s ease;
+    }
   }
   //Styling for individual comments
   &__container-main {
@@ -101,7 +105,7 @@
     &-date {
       @include text.subheader-mobile;
       font-weight: 400;
-      font-size: .875rem;
+      font-size: 0.875rem;
       color: $silver;
       margin-bottom: 0;
     }

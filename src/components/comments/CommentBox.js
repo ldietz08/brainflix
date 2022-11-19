@@ -11,12 +11,13 @@ const CommentBox = ({comments}) => {
           <div className="comments__input">
             <p className="comments__input-title">Join the conversation</p>
             <textarea
+              name="comment"
               className="comments__text-input"
-              defaultValue="Add a new comment"
+              placeholder="Add a new comment"
             ></textarea>
           </div>
           <div className="comments__btn-wrapper">
-            <button className="comments__btn">Comment</button>
+            <button type="submit" className="comments__btn">Comment</button>
           </div>
         </div>
       </div>
