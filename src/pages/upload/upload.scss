@@ -44,15 +44,15 @@
       @include text.body-copy-mobile;
       font-family: Avenir;
       color: $black;
-      border: 1px solid $mercury;
+      border: 0.0625rem solid $mercury;
       padding: 0.5rem 0 0 1rem;
       background-color: $alabaster;
       border-radius: 0.25rem;
       width: 100%;
       resize: none;
       &:focus {
-        outline: 1px solid $blue;
-        box-shadow: 0 0 0.5rem #76a7db;
+        outline: 0.125rem solid $blue;
+        box-shadow: 0 0 0.75rem #76a7db;
       }
     }
     &--description {
@@ -61,14 +61,14 @@
       margin-bottom: 1rem;
       padding: 0.5rem 5rem 3rem 1rem;
       color: $black;
-      border: 1px solid $mercury;
+      border: 0.0625rem solid $mercury;
       background-color: $alabaster;
       border-radius: 0.25rem;
       width: 100%;
       resize: none;
       &:focus {
-        outline: 1px solid $blue;
-        box-shadow: 0 0 0.5rem #76a7db;
+        outline: 0.125rem solid $blue;
+        box-shadow: 0 0 0.75rem #76a7db;
       }
     }
   }
@@ -120,7 +120,7 @@
       @include text.page-header-desktop-tablet;
       font-weight: 600;
       border-bottom: 1px solid $mercury;
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
     }
   }
   .hero {
