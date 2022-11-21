@@ -41,15 +41,15 @@
     @include text.body-copy-mobile;
     font-family: Avenir;
     margin-bottom: 1rem;
-    padding: 0.5rem 5.5rem 3rem 0.5rem;
+    padding: 0.5rem 5.8rem 3rem 0.5rem;
     color: $black;
-    border: 1px solid $mercury;
+    border: 0.0625rem solid $mercury;
     background-color: $alabaster;
     border-radius: 0.25rem;
     resize: none;
     &:focus {
-      outline: 1px solid $blue;
-      box-shadow: 0 0 0.5rem #76a7db;
+      outline: 0.125rem solid $blue;
+      box-shadow: 0 0 0.75rem #76a7db;
     }
   }
   &__btn {
@@ -67,6 +67,10 @@
     background-size: 1rem;
     background-repeat: no-repeat;
     background-position: 5%;
+    &:hover {
+      background-color: $dark-blue;
+      transition: 0.3s ease;
+    }
   }
   //Styling for individual comments
   &__container-main {
@@ -101,7 +105,7 @@
     &-date {
       @include text.subheader-mobile;
       font-weight: 400;
-      font-size: .875rem;
+      font-size: 0.875rem;
       color: $silver;
       margin-bottom: 0;
     }
