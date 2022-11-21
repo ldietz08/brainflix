@@ -1,10 +1,9 @@
 import React from "react";
 import "./comments.scss";
 
-const Comments = ({comments}) => {
+const Comments = ({ comments }) => {
   return (
     <>
-      {/* Ternary operator - If array contains comments render them, otherwise render alternative JSX */}
       {comments?.length > 0 ? (
         <div className="comments__content-container">
           {comments?.map((comment) => (
